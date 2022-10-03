@@ -1,0 +1,33 @@
+@import "variable";
+
+* {
+    margin: 0; 
+    padding: 0; 
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; 
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, $color-purple-dark, $color-purple-light);
+}
+
+.App {
+    overflow:hidden;
+    font-size: clamp(.8rem, 1rem, 1.2rem);
+    border-radius: 18px;
+    max-width: 95vw;
+    width: calc(100% - 20px); 
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    box-shadow: 1rem 2rem 5rem rgba(#000, .5)
+}

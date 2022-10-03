@@ -1,0 +1,95 @@
+@import "../../styles/base/variable.scss";
+
+.form-container {
+   background-color: $color-darkblue;
+   display: flex; 
+   flex-direction: column;
+   justify-content: center;
+   flex: 1 1 auto;
+   height: 100%;
+   width: calc(100% - 55%);
+   padding: 0 3rem;
+
+   &__title {
+    color: $color-white;
+    margin-bottom: $sm-gutter;
+   }
+
+   &__title-text {
+    margin-bottom: $sm-gutter;
+   }
+
+   &__items-icone {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    font-size: 1.5rem;
+   }
+
+   &__items-text {
+    text-align: center;
+    padding: $sm-gutter;
+
+    p, a {
+        font-size: .8rem;
+        padding: 5px 0;
+        text-decoration: none;
+        border: solid 1px transparent;
+    }
+
+    a {
+        display: inline-block;
+        color: $color-button;
+        transition: all .2s; 
+       
+
+        &:hover{
+            color: darken($color-button, 10%);
+            //text-decoration: underline;
+            transform: translateY(-2px) scale(1.2);
+            border-bottom: solid 1px darken($color-button, 10%);
+            
+           
+        }
+
+    }
+   }
+
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 2rem;
+    padding: 10px;
+    background-color: $color-purple-light;
+    border-radius: 8px;
+    
+    span {
+        position: absolute;
+        pointer-events: none;
+        transition: all .5s;
+        opacity: .5;
+        color: $color-white;
+
+    }
+
+    input {
+        outline: none;
+        border: none;
+        background-color: transparent;
+        margin-top: 5px;
+        color: $color-white;
+        transition: all .5s;
+
+        &:focus ~ span {
+            transform: translateY(-10px);
+            font-size: .8rem;
+            opacity: 1;
+            color: $color-darkblue;
+        }
+
+    }
+}
+
